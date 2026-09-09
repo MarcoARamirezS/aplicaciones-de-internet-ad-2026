@@ -4,21 +4,6 @@ Aplicación web musical desarrollada como proyecto evolutivo para la materia **A
 
 BeatFlow está inspirado en la experiencia de plataformas modernas de streaming musical, pero utiliza una identidad visual propia y un stack deliberadamente simple para reforzar fundamentos de desarrollo frontend.
 
----
-
-# Demo
-
-> Agregar aquí la URL cuando el proyecto sea publicado.
-
-```text
-URL_DEL_PROYECTO
-```
-
-Ejemplo:
-
-```text
-https://usuario.github.io/aplicaciones-de-internet/projects/beatflow/
-```
 
 ---
 
