@@ -10,7 +10,7 @@ Cada proyecto cuenta con su propia documentación, sesiones, código, recursos y
 
 | # | Proyecto | Tecnologías principales | Sesiones | Documentación |
 |---:|---|---|---:|---|
-| 01 | [BeatFlow](./projects/beatflow/README.md) | HTML5, TailwindCSS, CSS, JavaScript, APIs | 4 | [Ver proyecto](./projects/betflow/README.md) |
+| 01 | [BeatFlow](./projects/betflow/README.md) | HTML5, TailwindCSS, CSS, JavaScript, APIs | 4 | [Ver proyecto](./projects/betflow/README.md) |
 
 ---
 
