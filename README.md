@@ -10,7 +10,7 @@ Cada proyecto cuenta con su propia documentación, sesiones, código, recursos y
 
 | # | Proyecto | Tecnologías principales | Sesiones | Documentación |
 |---:|---|---|---:|---|
-| 01 | [BeatFlow](./projects/beatflow/README.md) | HTML5, TailwindCSS, CSS, JavaScript, APIs | 4 | [Ver proyecto](./projects/beatflow/README.md) |
+| 01 | [BeatFlow](./projects/beatflow/README.md) | HTML5, TailwindCSS, CSS, JavaScript, APIs | 4 | [Ver proyecto](./projects/betflow/README.md) |
 
 ---
 
@@ -70,7 +70,7 @@ Aplicación web musical inspirada en plataformas modernas de streaming.
 
 **Duración:** 4 sesiones de 1 hora con 30 minutos.
 
-[Ir a BeatFlow](./projects/beatflow/README.md)
+[Ir a BeatFlow](./projects/betflow/README.md)
 
 ---
 
