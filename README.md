@@ -18,7 +18,7 @@ Cada proyecto se desarrolla de forma evolutiva e incluye:
 
 | # | Proyecto | Tecnologías | Sesiones | Acceso |
 |---:|---|---|---:|---|
-| 01 | BeatFlow | HTML5, TailwindCSS, CSS, JavaScript, APIs | 4 | [Abrir proyecto](./projects/beatflow/README.md) |
+| 01 | BeatFlow | HTML5, TailwindCSS, CSS, JavaScript, APIs | 4 | [Abrir proyecto](./projects/betflow/README.md) |
 
 ---
 
@@ -82,7 +82,7 @@ Se utiliza como proyecto evolutivo para practicar:
 
 **Duración:** 4 sesiones de 1 hora con 30 minutos.
 
-[▶ Abrir BeatFlow](./projects/beatflow/README.md)
+[▶ Abrir BeatFlow](./projects/betflow/README.md)
 
 ---
 
