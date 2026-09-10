@@ -4,10 +4,31 @@ Aplicación web musical desarrollada como proyecto evolutivo para la materia **A
 
 BeatFlow está inspirado en la experiencia de plataformas modernas de streaming musical, pero utiliza una identidad visual propia y un stack deliberadamente simple para reforzar fundamentos de desarrollo frontend.
 
+---
+
+## Índice
+
+- [Objetivo del proyecto](#objetivo-del-proyecto)
+- [Stack tecnológico](#stack-tecnológico)
+- [Restricciones del proyecto](#restricciones-del-proyecto)
+- [Estructura general](#estructura-general)
+- [Arquitectura conceptual](#arquitectura-conceptual)
+- [Roadmap](#roadmap)
+- [Sesiones](#sesiones)
+  - [Sesión 1 — UI/UX y estructura](#sesión-1--uiux-y-estructura)
+  - [Sesión 2 — API musical y búsqueda](#sesión-2--api-musical-y-búsqueda)
+  - [Sesión 3 — Reproductor musical](#sesión-3--reproductor-musical)
+  - [Sesión 4 — Biblioteca y persistencia](#sesión-4--biblioteca-y-persistencia)
+- [Versiones](#versiones)
+- [Flujo Git](#flujo-git)
+- [Convención de commits](#convención-de-commits)
+- [Recursos](#recursos)
+- [Cómo iniciar](#cómo-iniciar)
+- [Criterios generales de calidad](#criterios-generales-de-calidad)
 
 ---
 
-# Objetivo del proyecto
+## Objetivo del proyecto
 
 Construir una aplicación web musical utilizando únicamente tecnologías del navegador y APIs públicas gratuitas.
 
@@ -29,9 +50,11 @@ Al finalizar, BeatFlow deberá permitir:
 - persistir preferencias con LocalStorage;
 - funcionar correctamente en desktop, tablet y móvil.
 
+[⬆ Regresar al índice](#índice)
+
 ---
 
-# Stack tecnológico
+## Stack tecnológico
 
 | Tecnología | Uso |
 |---|---|
@@ -47,9 +70,11 @@ Al finalizar, BeatFlow deberá permitir:
 | Git | Control de versiones |
 | GitHub | Repositorio |
 
+[⬆ Regresar al índice](#índice)
+
 ---
 
-# Restricciones del proyecto
+## Restricciones del proyecto
 
 Este proyecto no utilizará:
 
@@ -82,9 +107,11 @@ Estado
 Persistencia
 ```
 
+[⬆ Regresar al índice](#índice)
+
 ---
 
-# Estructura general
+## Estructura general
 
 ```text
 beatflow/
@@ -102,17 +129,13 @@ beatflow/
 │
 ├── js/
 │   ├── app.js
-│   │
 │   ├── data/
 │   │   └── mock.data.js
-│   │
 │   ├── api/
 │   │   └── audius.api.js
-│   │
 │   ├── services/
 │   │   ├── player.service.js
 │   │   └── storage.service.js
-│   │
 │   └── ui/
 │       ├── home.ui.js
 │       ├── search.ui.js
@@ -121,23 +144,21 @@ beatflow/
 │
 └── docs/
     ├── README.md
-    │
     ├── sesion-01/
     │   └── README.md
-    │
     ├── sesion-02/
     │   └── README.md
-    │
     ├── sesion-03/
     │   └── README.md
-    │
     └── sesion-04/
         └── README.md
 ```
 
+[⬆ Regresar al índice](#índice)
+
 ---
 
-# Arquitectura conceptual
+## Arquitectura conceptual
 
 ```text
                   USUARIO
@@ -162,11 +183,11 @@ beatflow/
               HTML Audio API
 ```
 
+[⬆ Regresar al índice](#índice)
+
 ---
 
-# Roadmap
-
-BeatFlow se desarrolla en cuatro sesiones.
+## Roadmap
 
 ```text
 Sesión 1
@@ -205,35 +226,17 @@ Favorites + History + LocalStorage
 v1.0.0
 ```
 
+[⬆ Regresar al índice](#índice)
+
 ---
 
-# Sesión 1 — UI/UX y estructura
+## Sesiones
 
-## Objetivo
+### Sesión 1 — UI/UX y estructura
 
-Construir la primera versión visual y responsive de BeatFlow.
+**Objetivo:** construir la primera versión visual y responsive de BeatFlow.
 
-## Temas
-
-- HTML5
-- TailwindCSS
-- CSS
-- Responsive Design
-- Design Tokens
-- JavaScript ES Modules
-- DOM
-- Arrays
-- `map()`
-- `find()`
-- Event Delegation
-- Estado básico
-- Git
-
-## Resultado esperado
-
-```text
-v0.1.0
-```
+**Versión:** `v0.1.0`
 
 Incluye:
 
@@ -241,148 +244,83 @@ Incluye:
 - header;
 - buscador visual;
 - hero;
-- canciones destacadas;
 - cards dinámicas;
+- canciones destacadas;
 - escuchados recientemente;
 - player visual;
 - navegación móvil;
-- responsive design;
 - datos mock.
 
-## Documentación
-
-[Ir a la Sesión 1](./docs/sesion-01/README.md)
+[📘 Abrir Sesión 1](./docs/sesion-01/README.md)
 
 ---
 
-# Sesión 2 — API musical y búsqueda
+### Sesión 2 — API musical y búsqueda
 
-## Objetivo
+**Objetivo:** reemplazar progresivamente datos mock por información real.
 
-Reemplazar progresivamente los datos simulados por información proveniente de una API pública gratuita.
-
-## Temas
-
-- REST API
-- HTTP
-- JSON
-- Fetch
-- async / await
-- Promises
-- try / catch
-- API musical
-- búsqueda
-- estados Loading / Empty / Error
-- transformación de datos
-
-## Resultado esperado
-
-```text
-v0.2.0
-```
+**Versión:** `v0.2.0`
 
 Incluye:
 
-- conexión con Audius;
-- canciones reales;
-- artistas reales;
-- portadas reales;
+- REST API;
+- Audius;
+- Fetch;
+- async/await;
 - búsqueda;
 - tendencias;
-- manejo de errores.
+- loading;
+- empty state;
+- error state.
 
-## Documentación
-
-[Ir a la Sesión 2](./docs/sesion-02/README.md)
+[📘 Abrir Sesión 2](./docs/sesion-02/README.md)
 
 ---
 
-# Sesión 3 — Reproductor musical
+### Sesión 3 — Reproductor musical
 
-## Objetivo
+**Objetivo:** agregar reproducción de audio real.
 
-Agregar reproducción real de audio y comportamiento completo del player.
-
-## Temas
-
-- HTMLAudioElement
-- Audio API
-- play
-- pause
-- currentTime
-- duration
-- volume
-- progress
-- ended
-- queue
-- previous
-- next
-
-## Resultado esperado
-
-```text
-v0.3.0
-```
+**Versión:** `v0.3.0`
 
 Incluye:
 
-- reproducción;
-- pausa;
-- progreso;
-- duración;
-- volumen;
-- canción anterior;
-- canción siguiente;
-- cola de reproducción.
+- play;
+- pause;
+- progress;
+- duration;
+- volume;
+- queue;
+- previous;
+- next.
 
-## Documentación
-
-[Ir a la Sesión 3](./docs/sesion-03/README.md)
+[📘 Abrir Sesión 3](./docs/sesion-03/README.md)
 
 ---
 
-# Sesión 4 — Biblioteca y persistencia
+### Sesión 4 — Biblioteca y persistencia
 
-## Objetivo
+**Objetivo:** completar BeatFlow con persistencia local.
 
-Convertir BeatFlow en una aplicación persistente.
-
-## Temas
-
-- LocalStorage
-- serialización JSON
-- favoritos
-- historial
-- preferencias
-- persistencia
-- UX
-- accesibilidad
-- responsive final
-
-## Resultado esperado
-
-```text
-v1.0.0
-```
+**Versión:** `v1.0.0`
 
 Incluye:
 
 - favoritos;
-- escuchados recientemente;
+- historial;
 - biblioteca;
 - preferencias;
-- persistencia;
-- estados vacíos;
+- LocalStorage;
 - accesibilidad;
-- revisión final responsive.
+- responsive final.
 
-## Documentación
+[📘 Abrir Sesión 4](./docs/sesion-04/README.md)
 
-[Ir a la Sesión 4](./docs/sesion-04/README.md)
+[⬆ Regresar al índice](#índice)
 
 ---
 
-# Versiones
+## Versiones
 
 | Versión | Sesión | Alcance |
 |---|---:|---|
@@ -391,35 +329,25 @@ Incluye:
 | `v0.3.0` | 3 | Reproductor |
 | `v1.0.0` | 4 | Biblioteca y persistencia |
 
+[⬆ Regresar al índice](#índice)
+
 ---
 
-# Flujo Git
-
-Se utilizará un flujo simplificado inspirado en GitFlow.
+## Flujo Git
 
 ```text
 main
  │
  ├── feature/session-01-ui
- │
  ├── feature/session-02-api
- │
  ├── feature/session-03-player
- │
  └── feature/session-04-library
 ```
 
-Crear una rama:
+Ejemplo:
 
 ```bash
 git checkout -b feature/session-01-ui
-```
-
-Trabajar y hacer commits:
-
-```bash
-git add .
-git commit -m "feat: create BeatFlow base layout"
 ```
 
 Al terminar:
@@ -435,11 +363,11 @@ Crear tag:
 git tag -a v0.1.0 -m "BeatFlow session 1"
 ```
 
+[⬆ Regresar al índice](#índice)
+
 ---
 
-# Convención de commits
-
-Ejemplos:
+## Convención de commits
 
 ```text
 chore: create project structure
@@ -454,15 +382,15 @@ fix: improve mobile player
 docs: update session instructions
 ```
 
+[⬆ Regresar al índice](#índice)
+
 ---
 
-# Recursos
+## Recursos
 
-## TailwindCSS
+### TailwindCSS
 
-```text
 https://tailwindcss.com/
-```
 
 Play CDN:
 
@@ -472,87 +400,53 @@ Play CDN:
 
 Documentación:
 
-```text
 https://tailwindcss.com/docs/installation/play-cdn
-```
 
----
+### Audius
 
-## Audius
-
-```text
 https://audius.co/
-```
 
 Documentación:
 
-```text
 https://docs.audius.co/
-```
 
----
+### MDN Web Docs
 
-## MDN Web Docs
-
-```text
 https://developer.mozilla.org/
-```
+
+[⬆ Regresar al índice](#índice)
 
 ---
 
-# Cómo iniciar
+## Cómo iniciar
 
-## 1. Clonar repositorio
+### 1. Clonar repositorio
 
 ```bash
 git clone URL_DEL_REPOSITORIO
 ```
 
-## 2. Entrar al proyecto
+### 2. Entrar al proyecto
 
 ```bash
 cd aplicaciones-de-internet/projects/beatflow
 ```
 
-## 3. Abrir VS Code
+### 3. Abrir VS Code
 
 ```bash
 code .
 ```
 
-## 4. Consultar la primera sesión
+### 4. Consultar documentación
 
-Abrir:
+[📚 Abrir índice de documentación](./docs/README.md)
 
-```text
-docs/sesion-01/README.md
-```
-
-o desde GitHub:
-
-[Comenzar con la Sesión 1](./docs/sesion-01/README.md)
+[⬆ Regresar al índice](#índice)
 
 ---
 
-# Cómo ejecutar
-
-Durante las primeras sesiones se recomienda utilizar **VS Code + Live Server**.
-
-Abrir:
-
-```text
-index.html
-```
-
-y seleccionar:
-
-```text
-Open with Live Server
-```
-
----
-
-# Criterios generales de calidad
+## Criterios generales de calidad
 
 Cada versión debe cumplir:
 
@@ -570,36 +464,8 @@ Cada versión debe cumplir:
 
 ---
 
-# Final esperado
+## Inicio del proyecto
 
-Al finalizar:
+[▶ Comenzar con la Sesión 1](./docs/sesion-01/README.md)
 
-```text
-BeatFlow v1.0.0
-
-HTML5
-+
-TailwindCSS
-+
-CSS
-+
-JavaScript
-+
-REST API
-+
-Audio
-+
-LocalStorage
-+
-Responsive Design
-+
-Git
-```
-
----
-
-# Inicio del proyecto
-
-La implementación comienza en:
-
-[Sesión 1 — UI/UX y estructura](./docs/sesion-01/README.md)
+[⬆ Regresar al índice](#índice)
