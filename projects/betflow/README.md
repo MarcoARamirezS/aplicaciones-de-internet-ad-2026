@@ -2,53 +2,46 @@
 
 Aplicación web musical desarrollada como proyecto evolutivo para la materia **Aplicaciones de Internet**.
 
-BeatFlow está inspirado en la experiencia de plataformas modernas de streaming musical, pero utiliza una identidad visual propia y un stack deliberadamente simple para reforzar fundamentos de desarrollo frontend.
+BeatFlow está inspirado en la experiencia de plataformas modernas de streaming musical, pero utiliza identidad visual propia.
 
 ---
 
 ## Índice
 
-- [Objetivo del proyecto](#objetivo-del-proyecto)
+- [Objetivo](#objetivo)
 - [Stack tecnológico](#stack-tecnológico)
-- [Restricciones del proyecto](#restricciones-del-proyecto)
-- [Estructura general](#estructura-general)
-- [Arquitectura conceptual](#arquitectura-conceptual)
-- [Roadmap](#roadmap)
+- [Restricciones](#restricciones)
+- [Arquitectura](#arquitectura)
 - [Sesiones](#sesiones)
-  - [Sesión 1 — UI/UX y estructura](#sesión-1--uiux-y-estructura)
-  - [Sesión 2 — API musical y búsqueda](#sesión-2--api-musical-y-búsqueda)
-  - [Sesión 3 — Reproductor musical](#sesión-3--reproductor-musical)
-  - [Sesión 4 — Biblioteca y persistencia](#sesión-4--biblioteca-y-persistencia)
 - [Versiones](#versiones)
+- [Documentación](#documentación)
 - [Flujo Git](#flujo-git)
-- [Convención de commits](#convención-de-commits)
 - [Recursos](#recursos)
-- [Cómo iniciar](#cómo-iniciar)
-- [Criterios generales de calidad](#criterios-generales-de-calidad)
 
 ---
 
-## Objetivo del proyecto
+## Objetivo
 
-Construir una aplicación web musical utilizando únicamente tecnologías del navegador y APIs públicas gratuitas.
+Construir una aplicación web musical utilizando tecnologías fundamentales del navegador y APIs públicas gratuitas.
 
-Al finalizar, BeatFlow deberá permitir:
+Al finalizar BeatFlow permitirá:
 
-- visualizar canciones destacadas;
+- visualizar canciones;
 - consultar tendencias;
 - buscar música;
-- mostrar artistas y portadas;
+- mostrar artistas;
+- mostrar portadas;
 - seleccionar canciones;
 - reproducir audio;
 - pausar y continuar;
 - controlar progreso;
 - controlar volumen;
-- avanzar y regresar canciones;
-- mantener una cola de reproducción;
+- cambiar de canción;
+- manejar una cola;
 - guardar favoritos;
-- mostrar canciones escuchadas recientemente;
-- persistir preferencias con LocalStorage;
-- funcionar correctamente en desktop, tablet y móvil.
+- registrar canciones reproducidas;
+- persistir información mediante LocalStorage;
+- funcionar en desktop, tablet y móvil.
 
 [⬆ Regresar al índice](#índice)
 
@@ -58,13 +51,13 @@ Al finalizar, BeatFlow deberá permitir:
 
 | Tecnología | Uso |
 |---|---|
-| HTML5 | Estructura semántica |
+| HTML5 | Estructura |
 | TailwindCSS 4 | UI responsive |
 | CSS | Design Tokens y estilos globales |
 | JavaScript ES6+ | Lógica |
 | ES Modules | Modularización |
-| Fetch / SDK | Consumo de API |
-| Audius API | Música, artistas, búsquedas y streaming |
+| Fetch | Consumo de APIs |
+| Audius API | Información musical |
 | HTML Audio API | Reproducción |
 | LocalStorage | Persistencia |
 | Git | Control de versiones |
@@ -74,20 +67,20 @@ Al finalizar, BeatFlow deberá permitir:
 
 ---
 
-## Restricciones del proyecto
+## Restricciones
 
-Este proyecto no utilizará:
+No se utilizarán:
 
-- React
-- Vue
-- Angular
-- Nuxt
-- Node.js backend
-- Express
-- Firebase
-- Base de datos propia
+- React;
+- Vue;
+- Angular;
+- Nuxt;
+- Node.js backend;
+- Express;
+- Firebase;
+- base de datos propia.
 
-El objetivo es comprender primero:
+El objetivo académico es dominar primero:
 
 ```text
 HTML
@@ -100,6 +93,8 @@ DOM
 +
 HTTP
 +
+JSON
++
 APIs
 +
 Estado
@@ -111,54 +106,7 @@ Persistencia
 
 ---
 
-## Estructura general
-
-```text
-beatflow/
-│
-├── README.md
-├── index.html
-├── .gitignore
-│
-├── css/
-│   ├── theme.css
-│   └── styles.css
-│
-├── assets/
-│   └── images/
-│
-├── js/
-│   ├── app.js
-│   ├── data/
-│   │   └── mock.data.js
-│   ├── api/
-│   │   └── audius.api.js
-│   ├── services/
-│   │   ├── player.service.js
-│   │   └── storage.service.js
-│   └── ui/
-│       ├── home.ui.js
-│       ├── search.ui.js
-│       ├── library.ui.js
-│       └── player.ui.js
-│
-└── docs/
-    ├── README.md
-    ├── sesion-01/
-    │   └── README.md
-    ├── sesion-02/
-    │   └── README.md
-    ├── sesion-03/
-    │   └── README.md
-    └── sesion-04/
-        └── README.md
-```
-
-[⬆ Regresar al índice](#índice)
-
----
-
-## Arquitectura conceptual
+## Arquitectura
 
 ```text
                   USUARIO
@@ -172,58 +120,13 @@ beatflow/
           ┌──────────┼──────────┐
           │          │          │
           ▼          ▼          ▼
-        UI        Services     State
-          │          │
-          │          ├───────────────┐
-          │          │               │
-          ▼          ▼               ▼
-         DOM    Audius API      LocalStorage
+         UI       Services     State
+          │          │          │
+          ▼          ▼          ▼
+         DOM      API        LocalStorage
                      │
                      ▼
               HTML Audio API
-```
-
-[⬆ Regresar al índice](#índice)
-
----
-
-## Roadmap
-
-```text
-Sesión 1
-   │
-   ▼
-UI + Responsive + Mock Data
-   │
-   ▼
-v0.1.0
-   │
-   ▼
-Sesión 2
-   │
-   ▼
-Audius API + Search
-   │
-   ▼
-v0.2.0
-   │
-   ▼
-Sesión 3
-   │
-   ▼
-Audio Player + Queue
-   │
-   ▼
-v0.3.0
-   │
-   ▼
-Sesión 4
-   │
-   ▼
-Favorites + History + LocalStorage
-   │
-   ▼
-v1.0.0
 ```
 
 [⬆ Regresar al índice](#índice)
@@ -234,22 +137,22 @@ v1.0.0
 
 ### Sesión 1 — UI/UX y estructura
 
-**Objetivo:** construir la primera versión visual y responsive de BeatFlow.
-
 **Versión:** `v0.1.0`
+
+Objetivo:
+
+Construir la primera versión visual y responsive.
 
 Incluye:
 
-- sidebar desktop;
+- sidebar;
 - header;
-- buscador visual;
 - hero;
-- cards dinámicas;
-- canciones destacadas;
-- escuchados recientemente;
+- cards;
 - player visual;
 - navegación móvil;
-- datos mock.
+- datos mock;
+- JavaScript modular.
 
 [📘 Abrir Sesión 1](./docs/sesion-01/README.md)
 
@@ -257,21 +160,25 @@ Incluye:
 
 ### Sesión 2 — API musical y búsqueda
 
-**Objetivo:** reemplazar progresivamente datos mock por información real.
-
 **Versión:** `v0.2.0`
+
+Objetivo:
+
+Conectar BeatFlow con una API pública gratuita.
 
 Incluye:
 
-- REST API;
-- Audius;
+- REST;
+- HTTP;
+- JSON;
 - Fetch;
 - async/await;
+- Audius;
 - búsqueda;
-- tendencias;
+- trending;
 - loading;
-- empty state;
-- error state.
+- empty;
+- error.
 
 [📘 Abrir Sesión 2](./docs/sesion-02/README.md)
 
@@ -279,20 +186,23 @@ Incluye:
 
 ### Sesión 3 — Reproductor musical
 
-**Objetivo:** agregar reproducción de audio real.
-
 **Versión:** `v0.3.0`
+
+Objetivo:
+
+Implementar reproducción de audio real.
 
 Incluye:
 
 - play;
 - pause;
-- progress;
 - duration;
+- currentTime;
+- progress;
 - volume;
-- queue;
 - previous;
-- next.
+- next;
+- queue.
 
 [📘 Abrir Sesión 3](./docs/sesion-03/README.md)
 
@@ -300,19 +210,21 @@ Incluye:
 
 ### Sesión 4 — Biblioteca y persistencia
 
-**Objetivo:** completar BeatFlow con persistencia local.
-
 **Versión:** `v1.0.0`
+
+Objetivo:
+
+Agregar persistencia y completar la aplicación.
 
 Incluye:
 
 - favoritos;
 - historial;
 - biblioteca;
-- preferencias;
 - LocalStorage;
+- preferencias;
 - accesibilidad;
-- responsive final.
+- validación final.
 
 [📘 Abrir Sesión 4](./docs/sesion-04/README.md)
 
@@ -322,12 +234,33 @@ Incluye:
 
 ## Versiones
 
-| Versión | Sesión | Alcance |
+| Versión | Sesión | Resultado |
 |---|---:|---|
-| `v0.1.0` | 1 | UI responsive y datos mock |
-| `v0.2.0` | 2 | API y búsqueda |
-| `v0.3.0` | 3 | Reproductor |
-| `v1.0.0` | 4 | Biblioteca y persistencia |
+| `v0.1.0` | 1 | UI + Responsive + Mock Data |
+| `v0.2.0` | 2 | API + Search |
+| `v0.3.0` | 3 | Audio Player |
+| `v1.0.0` | 4 | Biblioteca + Persistencia |
+
+[⬆ Regresar al índice](#índice)
+
+---
+
+## Documentación
+
+Toda la documentación del proyecto se encuentra en:
+
+[📚 Abrir índice de documentación](./docs/README.md)
+
+Estructura:
+
+```text
+docs/
+├── README.md
+├── sesion-01/
+├── sesion-02/
+├── sesion-03/
+└── sesion-04/
+```
 
 [⬆ Regresar al índice](#índice)
 
@@ -357,29 +290,10 @@ git checkout main
 git merge feature/session-01-ui
 ```
 
-Crear tag:
+Tag:
 
 ```bash
 git tag -a v0.1.0 -m "BeatFlow session 1"
-```
-
-[⬆ Regresar al índice](#índice)
-
----
-
-## Convención de commits
-
-```text
-chore: create project structure
-feat: add responsive sidebar
-style: add BeatFlow theme
-feat: render trending tracks
-feat: integrate Audius API
-feat: implement music search
-feat: implement audio player
-feat: add favorite tracks
-fix: improve mobile player
-docs: update session instructions
 ```
 
 [⬆ Regresar al índice](#índice)
@@ -398,19 +312,13 @@ Play CDN:
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 ```
 
-Documentación:
-
-https://tailwindcss.com/docs/installation/play-cdn
-
 ### Audius
 
 https://audius.co/
 
-Documentación:
-
 https://docs.audius.co/
 
-### MDN Web Docs
+### MDN
 
 https://developer.mozilla.org/
 
@@ -418,54 +326,10 @@ https://developer.mozilla.org/
 
 ---
 
-## Cómo iniciar
-
-### 1. Clonar repositorio
-
-```bash
-git clone URL_DEL_REPOSITORIO
-```
-
-### 2. Entrar al proyecto
-
-```bash
-cd aplicaciones-de-internet/projects/beatflow
-```
-
-### 3. Abrir VS Code
-
-```bash
-code .
-```
-
-### 4. Consultar documentación
-
-[📚 Abrir índice de documentación](./docs/README.md)
-
-[⬆ Regresar al índice](#índice)
-
----
-
-## Criterios generales de calidad
-
-Cada versión debe cumplir:
-
-- HTML semántico;
-- interfaz responsive;
-- JavaScript modular;
-- sin errores de consola;
-- estados visuales claros;
-- navegación accesible;
-- imágenes con `alt`;
-- focus visible;
-- commits pequeños;
-- nombres descriptivos;
-- sin secretos en el repositorio.
-
----
-
-## Inicio del proyecto
+## Comenzar
 
 [▶ Comenzar con la Sesión 1](./docs/sesion-01/README.md)
 
-[⬆ Regresar al índice](#índice)
+---
+
+[⬅ Regresar al índice general de proyectos](../../README.md)

@@ -1,23 +1,31 @@
 # Aplicaciones de Internet — Proyectos
 
-Repositorio de proyectos prácticos desarrollados para la materia **Aplicaciones de Internet**.
+Repositorio académico de proyectos prácticos desarrollados para la materia **Aplicaciones de Internet**.
 
-Cada proyecto cuenta con su propia documentación, sesiones, código, recursos y evolución.
+Cada proyecto se desarrolla de forma evolutiva e incluye:
+
+- planeación;
+- documentación;
+- código;
+- prácticas;
+- control de versiones;
+- validaciones;
+- versiones incrementales.
 
 ---
 
-# Índice de proyectos
+## Índice de proyectos
 
-| # | Proyecto | Tecnologías principales | Sesiones | Documentación |
+| # | Proyecto | Tecnologías | Sesiones | Acceso |
 |---:|---|---|---:|---|
-| 01 | [BeatFlow](./projects/betflow/README.md) | HTML5, TailwindCSS, CSS, JavaScript, APIs | 4 | [Ver proyecto](./projects/betflow/README.md) |
+| 01 | BeatFlow | HTML5, TailwindCSS, CSS, JavaScript, APIs | 4 | [Abrir proyecto](./projects/beatflow/README.md) |
 
 ---
 
-# Estructura general del repositorio
+## Estructura general del repositorio
 
 ```text
-aplicaciones-de-internet/
+aplicaciones-de-internet-ad-2026/
 │
 ├── README.md
 │
@@ -25,11 +33,8 @@ aplicaciones-de-internet/
     │
     ├── beatflow/
     │   ├── README.md
-    │   ├── index.html
-    │   ├── css/
-    │   ├── js/
-    │   ├── assets/
     │   └── docs/
+    │       ├── README.md
     │       ├── sesion-01/
     │       ├── sesion-02/
     │       ├── sesion-03/
@@ -40,43 +45,50 @@ aplicaciones-de-internet/
 
 ---
 
-# Cómo utilizar este repositorio
+## Cómo utilizar este repositorio
 
-1. Selecciona un proyecto desde el índice.
-2. Abre el `README.md` del proyecto.
-3. Sigue las sesiones en el orden indicado.
-4. Consulta los archivos de código y recursos correspondientes.
-5. Realiza los commits y validaciones especificados en cada sesión.
+1. Seleccionar un proyecto desde el índice.
+2. Abrir el `README.md` del proyecto.
+3. Consultar el índice de sesiones.
+4. Iniciar con la sesión correspondiente.
+5. Seguir los documentos en el orden indicado.
+6. Realizar los commits solicitados.
+7. Ejecutar la validación de cada sesión.
+8. Crear el tag correspondiente cuando la versión esté terminada.
 
 ---
 
-# Proyectos
+## Proyectos
 
-## 01 — BeatFlow
+### 01 — BeatFlow
 
 Aplicación web musical inspirada en plataformas modernas de streaming.
 
-**Tecnologías:**
+Se utiliza como proyecto evolutivo para practicar:
 
-- HTML5
-- TailwindCSS
-- CSS
-- JavaScript
-- ES Modules
-- APIs públicas gratuitas
-- HTML Audio API
-- LocalStorage
-- Git y GitHub
+- HTML5;
+- TailwindCSS;
+- CSS;
+- JavaScript;
+- ES Modules;
+- DOM;
+- APIs REST;
+- JSON;
+- Fetch;
+- HTML Audio API;
+- LocalStorage;
+- Git;
+- GitHub.
 
 **Duración:** 4 sesiones de 1 hora con 30 minutos.
 
-[Ir a BeatFlow](./projects/betflow/README.md)
+[▶ Abrir BeatFlow](./projects/beatflow/README.md)
 
 ---
 
-# Convención para nuevos proyectos
+## Convención para nuevos proyectos
 
-Cada proyecto deberá agregarse dentro de:
+Todos los proyectos deben colocarse dentro de:
 
 ```text
 projects/
@@ -92,10 +104,10 @@ projects/
 └── proyecto-04/
 ```
 
-Cada proyecto deberá contener su propio:
+Cada proyecto debe incluir su propio:
 
 ```text
 README.md
 ```
 
-El `README.md` principal de este repositorio se mantendrá únicamente como **índice general de proyectos**.
+El `README.md` principal del repositorio funcionará únicamente como **índice general de proyectos**.
