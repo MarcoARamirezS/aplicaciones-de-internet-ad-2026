@@ -19,6 +19,7 @@ Cada proyecto se desarrolla de forma evolutiva e incluye:
 | # | Proyecto | Tecnologías | Sesiones | Acceso |
 |---:|---|---|---:|---|
 | 01 | BeatFlow | HTML5, TailwindCSS, CSS, JavaScript, APIs | 4 | [Abrir proyecto](./projects/betflow/README.md) |
+| 02 | UniDash 360 | HTML5, TailwindCSS, JavaScript, LocalStorage, Chart.js, APIs | 3 | [Abrir proyecto](./projects/unidash360/README.md) |
 
 ---
 
@@ -31,7 +32,7 @@ aplicaciones-de-internet-ad-2026/
 │
 └── projects/
     │
-    ├── beatflow/
+    ├── betflow/
     │   ├── README.md
     │   └── docs/
     │       ├── README.md
@@ -39,6 +40,14 @@ aplicaciones-de-internet-ad-2026/
     │       ├── sesion-02/
     │       ├── sesion-03/
     │       └── sesion-04/
+    │
+    ├── unidash360/
+    │   ├── README.md
+    │   └── docs/
+    │       ├── README.md
+    │       ├── sesion-01/
+    │       ├── sesion-02/
+    │       └── sesion-03/
     │
     └── futuros-proyectos/
 ```
@@ -86,6 +95,35 @@ Se utiliza como proyecto evolutivo para practicar:
 
 ---
 
+### 02 — UniDash 360
+
+Dashboard personal universitario que integra información propia y datos obtenidos desde servicios públicos de Internet.
+
+Se utiliza como proyecto evolutivo para practicar:
+
+- HTML5;
+- TailwindCSS;
+- JavaScript ES Modules;
+- DOM y eventos;
+- CRUD;
+- LocalStorage;
+- arreglos, `filter()`, `map()` y `reduce()`;
+- Chart.js;
+- Browser Geolocation API;
+- consumo de múltiples APIs REST;
+- `fetch`, JSON y `async/await`;
+- ubicación y reverse geocoding;
+- clima;
+- tipos de cambio e históricos;
+- noticias;
+- Git y GitHub.
+
+**Duración:** 3 sesiones de 1 hora con 30 minutos.
+
+[▶ Abrir UniDash 360](./projects/unidash360/README.md)
+
+---
+
 ## Convención para nuevos proyectos
 
 Todos los proyectos deben colocarse dentro de:
@@ -98,8 +136,8 @@ Ejemplo:
 
 ```text
 projects/
-├── beatflow/
-├── proyecto-02/
+├── betflow/
+├── unidash360/
 ├── proyecto-03/
 └── proyecto-04/
 ```
