@@ -1,89 +1,60 @@
 # UniDash 360 — Sesión 1 completa
 
-[📘 Sesión 1](./README.md) · [⬅ Documentación](../README.md) · [🏠 UniDash 360](../../README.md) · [📚 Índice general](../../../../README.md) · [Siguiente ▶](./01_RECURSOS_Y_LINKS.md)
-
----
-
-## Dashboard + tareas + persistencia
-
-**Duración:** 1 hora 30 minutos  
-**Versión objetivo:** `v0.1.0`
+[📘 Sesión 1](./README.md) · [📚 Documentación](../README.md)
 
 ## Objetivo
 
-Construir la base de UniDash 360 con navegación responsive, un dashboard de productividad y un CRUD completo de tareas persistido en `LocalStorage`.
+Construir el **100 % del contrato visual** de la aplicación. La sesión termina con una aplicación que parece completa, aunque todavía no persista ni consulte datos reales.
 
-## Distribución sugerida
+## Resultado esperado
 
-| Tiempo | Actividad |
-|---|---|
-| 0–10 min | Presentación del proyecto y estructura |
-| 10–25 min | HTML, sidebar, dashboard y navegación |
-| 25–40 min | Tema y estilos responsive |
-| 40–55 min | Servicio LocalStorage |
-| 55–75 min | CRUD de tareas |
-| 75–85 min | Dashboard y filtros |
-| 85–90 min | Validación y commit |
+- Sidebar responsive.
+- Header y ubicación simulada.
+- Dashboard con métricas.
+- Formularios visuales de tareas y movimientos.
+- Listas de tareas y finanzas.
+- Estadísticas y gráficas.
+- Widget de clima simulado.
+- Tipos de cambio simulados.
+- Histórico visual de divisas.
+- Noticias simuladas.
+- Navegación entre todas las vistas.
 
 ## Flujo
 
 ```text
-Formulario
-   ↓
-tasks.module.js
-   ↓
-storage.service.js
-   ↓
-LocalStorage
-   ↓
-refreshTasks()
-   ↓
-Dashboard + listado
+mock.data.js
+   ├── tasks.module.js
+   ├── finance.module.js
+   ├── dashboard.module.js
+   ├── charts.module.js
+   └── external.module.js
+              ↓
+            app.js
+              ↓
+             DOM
 ```
+
+## Distribución sugerida
+
+| Tiempo | Actividad |
+|---:|---|
+| 0–15 min | estructura + AppShell + navegación |
+| 15–40 min | dashboard + tareas + finanzas |
+| 40–60 min | divisas + noticias + clima |
+| 60–75 min | Chart.js + mock data |
+| 75–90 min | responsive + Git + validación |
 
 ## Rama
 
 ```bash
-git checkout -b feature/session-01-tasks
+git checkout -b feature/unidash-session-01-ui
 ```
 
-## Commits sugeridos
+## Commit final
 
 ```bash
 git add .
-git commit -m "chore: create UniDash 360 structure"
-
-git add .
-git commit -m "feat: add responsive dashboard layout"
-
-git add .
-git commit -m "feat: add task CRUD with local storage"
-
-git add .
-git commit -m "feat: add productivity dashboard metrics"
+git commit -m "feat: build complete UniDash visual interface with mock data"
+git tag -a v0.1.0 -m "UniDash 360 session 1 UI first"
 ```
-
-## Tag
-
-```bash
-git checkout main
-git merge feature/session-01-tasks
-git tag -a v0.1.0 -m "UniDash 360 session 1"
-```
-
-## Criterios de cierre
-
-- [ ] navegación funciona;
-- [ ] sidebar responsive;
-- [ ] crear tarea;
-- [ ] editar tarea;
-- [ ] completar/reabrir;
-- [ ] eliminar;
-- [ ] filtros;
-- [ ] LocalStorage conserva datos;
-- [ ] dashboard se actualiza;
-- [ ] consola sin errores.
-
----
-
-[📘 Sesión 1](./README.md) · [⬅ Documentación](../README.md) · [🏠 UniDash 360](../../README.md) · [📚 Índice general](../../../../README.md) · [Siguiente ▶](./01_RECURSOS_Y_LINKS.md)

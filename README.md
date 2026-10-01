@@ -32,7 +32,7 @@ aplicaciones-de-internet-ad-2026/
 │
 └── projects/
     │
-    ├── betflow/
+    ├── beatflow/
     │   ├── README.md
     │   └── docs/
     │       ├── README.md
@@ -95,28 +95,24 @@ Se utiliza como proyecto evolutivo para practicar:
 
 ---
 
+
 ### 02 — UniDash 360
 
-Dashboard personal universitario que integra información propia y datos obtenidos desde servicios públicos de Internet.
+Dashboard personal universitario construido con una estrategia **UI-first**: primero se desarrolla toda la experiencia visual con datos mock; después se conectan estado y persistencia local; finalmente se integran endpoints públicos.
 
-Se utiliza como proyecto evolutivo para practicar:
+Se utiliza para practicar:
 
-- HTML5;
-- TailwindCSS;
-- JavaScript ES Modules;
-- DOM y eventos;
-- CRUD;
+- diseño responsive y componentes UI;
+- datos mock y renderizado dinámico;
+- formularios y CRUD;
 - LocalStorage;
-- arreglos, `filter()`, `map()` y `reduce()`;
+- transformación de datos con `filter`, `map` y `reduce`;
 - Chart.js;
-- Browser Geolocation API;
-- consumo de múltiples APIs REST;
-- `fetch`, JSON y `async/await`;
-- ubicación y reverse geocoding;
-- clima;
-- tipos de cambio e históricos;
-- noticias;
-- Git y GitHub.
+- Geolocation API;
+- Fetch y APIs REST;
+- clima, divisas y noticias;
+- manejo de estados `loading`, `error` y fallback;
+- Git y versionado incremental.
 
 **Duración:** 3 sesiones de 1 hora con 30 minutos.
 
@@ -136,8 +132,8 @@ Ejemplo:
 
 ```text
 projects/
-├── betflow/
-├── unidash360/
+├── beatflow/
+├── proyecto-02/
 ├── proyecto-03/
 └── proyecto-04/
 ```
